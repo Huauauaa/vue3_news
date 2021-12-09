@@ -1,5 +1,12 @@
 <script setup>
-import { ref, reactive, defineProps, watch, defineEmits } from 'vue';
+import {
+  ref,
+  reactive,
+  defineProps,
+  watch,
+  defineEmits,
+  watchEffect,
+} from 'vue';
 
 defineProps({
   msg: {
@@ -25,8 +32,8 @@ const data1 = reactive({
 });
 
 const changeName = () => {
-  // data.value.video.title += '*';
-  // data.value.video.likes += 1;
+  data.value.video.title += '*';
+  data.value.video.likes += 1;
 
   // data1.video.title += '$';
   // data1.video.likes -= 1;
@@ -49,6 +56,12 @@ watch(data1, (val, oldVal) => {
 
 watch(data1.video, (val, oldVal) => {
   console.log('data1.video', val, oldVal);
+});
+
+// triggered when use
+watchEffect(() => {
+  const a = data.value.video.title;
+  console.log('watchEffect');
 });
 </script>
 
