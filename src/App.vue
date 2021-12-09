@@ -1,10 +1,18 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import Demo from './components/Demo.vue';
+
+const isShowDemo = ref(true);
 
 function say() {
   console.log('say some words');
+}
+
+function onSwitchDemo() {
+  isShowDemo.value = !isShowDemo.value;
 }
 </script>
 
@@ -17,6 +25,8 @@ function say() {
       <p>Version: 1.0.1</p>
     </template>
   </HelloWorld>
+  <button @click="onSwitchDemo">{{ isShowDemo ? 'hide' : 'show' }}</button>
+  <Demo v-if="isShowDemo" />
 </template>
 
 <style>
