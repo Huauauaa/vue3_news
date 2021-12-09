@@ -1,12 +1,22 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+
+function say() {
+  console.log('say some words');
+}
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <HelloWorld msg="Hello Vue 3 + Vite" @say="say">
+    <template #name>
+      <span>Component: HelloWorld.vue</span>
+    </template>
+    <template #version>
+      <p>Version: 1.0.1</p>
+    </template>
+  </HelloWorld>
 </template>
 
 <style>
