@@ -4,6 +4,7 @@
 import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import Demo from './components/Demo.vue';
+import Parent from './components/Parent.vue';
 
 const isShowDemo = ref(true);
 
@@ -17,6 +18,7 @@ function onSwitchDemo() {
 </script>
 
 <template>
+  <Parent />
   <HelloWorld msg="Hello Vue 3 + Vite" @say="say">
     <template #name>
       <span>Component: HelloWorld.vue</span>
