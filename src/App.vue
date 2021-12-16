@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import Demo from './components/Demo.vue';
 import Parent from './components/Parent.vue';
+import variables from './styles/variables';
 
 const isShowDemo = ref(true);
 
@@ -18,17 +19,19 @@ function onSwitchDemo() {
 </script>
 
 <template>
-  <Parent />
-  <HelloWorld msg="Hello Vue 3 + Vite" @say="say">
-    <template #name>
-      <span>Component: HelloWorld.vue</span>
-    </template>
-    <template #version>
-      <p>Version: 1.0.1</p>
-    </template>
-  </HelloWorld>
-  <button @click="onSwitchDemo">{{ isShowDemo ? 'hide' : 'show' }}</button>
-  <Demo v-if="isShowDemo" />
+  <div :style="variables">
+    <Parent data-name="Parent" />
+    <HelloWorld msg="Hello Vue 3 + Vite" @say="say">
+      <template #name>
+        <span>Component: HelloWorld.vue</span>
+      </template>
+      <template #version>
+        <p>Version: 1.0.1</p>
+      </template>
+    </HelloWorld>
+    <button @click="onSwitchDemo">{{ isShowDemo ? 'hide' : 'show' }}</button>
+    <Demo v-if="isShowDemo" />
+  </div>
 </template>
 
 <style>

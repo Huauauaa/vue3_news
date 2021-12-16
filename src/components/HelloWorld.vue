@@ -1,12 +1,8 @@
 <script setup>
-import {
-  ref,
-  reactive,
-  defineProps,
-  watch,
-  defineEmits,
-  watchEffect,
-} from 'vue';
+import { ref, reactive, watch, defineEmits, watchEffect } from 'vue';
+import variables from '../styles/variables';
+
+console.log(variables['--primary']);
 
 defineProps({
   msg: {
@@ -68,7 +64,7 @@ watchEffect(() => {
 <template>
   <slot name="name"></slot>
   <slot name="version"></slot>
-  <p>msg: {{ msg }}</p>
+  <p class="msg">msg: {{ msg }}</p>
   <div>title: {{ data.video.title }}</div>
   <div>likes: {{ data.video.likes }}</div>
   <hr />
@@ -77,4 +73,9 @@ watchEffect(() => {
   <button @click="changeName">update</button>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.msg {
+  color: $primary;
+  background-color: var(--bg);
+}
+</style>
