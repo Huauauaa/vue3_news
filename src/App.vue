@@ -3,6 +3,8 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import DraggableDemo from './components/DraggableDemo.vue';
+import DraggableDemo1 from './components/DraggableDemo1.vue';
 import Demo from './components/Demo.vue';
 import Parent from './components/Parent.vue';
 import variables from './styles/variables';
@@ -20,6 +22,8 @@ function onSwitchDemo() {
 
 <template>
   <div :style="variables">
+    <DraggableDemo1 />
+    <DraggableDemo />
     <Parent data-name="Parent" />
     <HelloWorld msg="Hello Vue 3 + Vite" @say="say">
       <template #name>
