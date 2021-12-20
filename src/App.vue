@@ -8,6 +8,8 @@ import DraggableDemo1 from './components/DraggableDemo1.vue';
 import Demo from './components/Demo.vue';
 import Parent from './components/Parent.vue';
 import Dog from './components/Dog.vue';
+import VuexDemo from './components/VuexDemo.vue';
+import VuexDemo1 from './components/VuexDemo1.vue';
 import variables from './styles/variables';
 
 const isShowDemo = ref(true);
@@ -23,6 +25,8 @@ function onSwitchDemo() {
 
 <template>
   <div :style="variables">
+    <VuexDemo1 />
+    <VuexDemo />
     <suspense>
       <Dog />
     </suspense>
