@@ -11,6 +11,7 @@ import Dog from './components/Dog.vue';
 import VuexDemo from './components/VuexDemo.vue';
 import VuexDemo1 from './components/VuexDemo1.vue';
 import variables from './styles/variables';
+import IDBDemo from './components/IDBDemo.vue';
 
 const isShowDemo = ref(true);
 
@@ -25,6 +26,8 @@ function onSwitchDemo() {
 
 <template>
   <div :style="variables">
+    <suspense><IDBDemo /></suspense>
+
     <VuexDemo1 />
     <VuexDemo />
     <suspense>
