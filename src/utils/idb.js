@@ -1,6 +1,9 @@
 const DB_NAME = 'vue3DB';
 const DB_VERSION = 1;
+const DB_STORES = ['cats', 'dogs'];
 let DB;
+
+// https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore
 
 export default {
   async getDb() {
@@ -9,7 +12,7 @@ export default {
         return resolve(DB);
       }
       console.info('OPENING DB', DB);
-      let request = window.indexedDB.open(DB_NAME, DB_VERSION);
+      const request = window.indexedDB.open(DB_NAME, DB_VERSION);
 
       request.onerror = (e) => {
         console.info('Error opening db', e);
@@ -23,106 +26,119 @@ export default {
 
       request.onupgradeneeded = (e) => {
         console.info('onupgradeneeded');
-        let db = e.target.result;
-        db.createObjectStore('cats', { autoIncrement: true, keyPath: 'id' });
-        db.createObjectStore('dogs', { autoIncrement: true, keyPath: 'id' });
+        const db = e.target.result;
+        DB_STORES.forEach((item) => {
+          db.createObjectStore(item, { autoIncrement: true, keyPath: 'id' });
+        });
       };
     });
   },
-  async deleteCat(cat) {
-    let db = await this.getDb();
+  async add({ storeName, item }) {
+    if (!storeName || !item) {
+      throw 'storeName, item is required';
+    }
+    const db = await this.getDb();
 
     return new Promise((resolve) => {
-      let trans = db.transaction(['cats'], 'readwrite');
+      const trans = db.transaction([storeName], 'readwrite');
       trans.oncomplete = () => {
         resolve();
       };
 
-      let store = trans.objectStore('cats');
-      store.delete(cat.id);
+      const store = trans.objectStore(storeName);
+      store.add(item);
     });
   },
-  async deleteDog(item) {
-    let db = await this.getDb();
+  async clear(storeName) {
+    const db = await this.getDb();
 
     return new Promise((resolve) => {
-      let trans = db.transaction(['dogs'], 'readwrite');
+      const trans = db.transaction([storeName], 'readwrite');
       trans.oncomplete = () => {
         resolve();
       };
 
-      let store = trans.objectStore('dogs');
-      store.delete(item.id);
+      const store = trans.objectStore(storeName);
+      store.clear();
     });
   },
-  async getCats() {
-    let db = await this.getDb();
+
+  async delete({ storeName, id }) {
+    if (!storeName || !id) {
+      throw 'storeName, id is required';
+    }
+    const db = await this.getDb();
 
     return new Promise((resolve) => {
-      let trans = db.transaction(['cats'], 'readonly');
+      const trans = db.transaction([storeName], 'readwrite');
       trans.oncomplete = () => {
-        resolve(cats);
+        resolve();
       };
 
-      let store = trans.objectStore('cats');
-      let cats = [];
+      const store = trans.objectStore(storeName);
+      store.delete(id);
+    });
+  },
+  async getAll({ storeName }) {
+    if (!storeName) {
+      throw 'storeName is required';
+    }
+    const db = await this.getDb();
+
+    return new Promise((resolve) => {
+      let result = [];
+      const trans = db.transaction([storeName], 'readonly');
+      const store = trans.objectStore(storeName);
+
+      trans.oncomplete = () => {
+        resolve(result);
+      };
 
       store.openCursor().onsuccess = (e) => {
         let cursor = e.target.result;
         if (cursor) {
-          cats.push(cursor.value);
+          result.push(cursor.value);
           cursor.continue();
         }
       };
     });
   },
 
-  async getDogs() {
-    let db = await this.getDb();
+  async put({ storeName, item = {}, id }) {
+    if (!storeName) {
+      throw 'storeName, item is required';
+    }
+    const db = await this.getDb();
 
     return new Promise((resolve) => {
-      let trans = db.transaction(['dogs'], 'readonly');
-      trans.oncomplete = () => {
-        resolve(dogs);
-      };
-
-      let store = trans.objectStore('dogs');
-      let dogs = [];
-
-      store.openCursor().onsuccess = (e) => {
-        let cursor = e.target.result;
-        if (cursor) {
-          dogs.push(cursor.value);
-          cursor.continue();
-        }
-      };
-    });
-  },
-
-  async saveCat(cat) {
-    let db = await this.getDb();
-
-    return new Promise((resolve) => {
-      let trans = db.transaction(['cats'], 'readwrite');
+      const trans = db.transaction([storeName], 'readwrite');
       trans.oncomplete = () => {
         resolve();
       };
 
-      let store = trans.objectStore('cats');
-      store.put(cat);
-    });
-  },
-  async saveDog(item) {
-    let db = await this.getDb();
+      console.log(storeName, item, id);
 
-    return new Promise((resolve) => {
-      let trans = db.transaction(['dogs'], 'readwrite');
-      trans.oncomplete = () => {
-        resolve();
-      };
-
-      let store = trans.objectStore('dogs');
+      const store = trans.objectStore(storeName);
       store.put(item);
+    });
+  },
+
+  async getOne({ storeName, id }) {
+    if (!storeName || !id) {
+      throw 'storeName, id is required';
+    }
+    const db = await this.getDb();
+    let target = null;
+
+    return new Promise((resolve) => {
+      const trans = db.transaction([storeName], 'readwrite');
+
+      trans.oncomplete = () => {
+        resolve(target?.result);
+      };
+
+      const store = trans.objectStore(storeName);
+      target = store.get(id);
     });
   },
 };
