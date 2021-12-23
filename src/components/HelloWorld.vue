@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, watch, defineEmits, watchEffect } from 'vue';
+import { ref, reactive, watch, watchEffect } from 'vue';
 import variables from '../styles/variables';
 
 console.log(variables['--primary']);
