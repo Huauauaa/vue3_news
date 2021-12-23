@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "sass": "^1.45.0",
@@ -13,7 +14,9 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.5",
     "@vitejs/plugin-vue": "^1.10.2",
+    "jest": "^27.4.5",
     "vite": "^2.7.0"
   }
 }
