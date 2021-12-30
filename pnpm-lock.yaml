@@ -2,8 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/preset-env': ^7.16.5
+  '@element-plus/icons': ^0.0.11
   '@vitejs/plugin-vue': ^1.10.2
+  element-plus: ^1.2.0-beta.6
   jest: ^27.4.5
+  nanoid: ^3.1.30
   sass: ^1.45.0
   vite: ^2.7.0
   vue: ^3.2.23
@@ -11,6 +14,9 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
+  '@element-plus/icons': 0.0.11
+  element-plus: 1.2.0-beta.6_vue@3.2.24
+  nanoid: 3.1.30
   sass: 1.45.0
   vue: 3.2.24
   vuedraggable: 4.1.0_vue@3.2.24
@@ -1221,6 +1227,19 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
+  /@element-plus/icons-vue/0.2.4_vue@3.2.24:
+    resolution: {integrity: sha512-RsJNyL58rwxtsjeMy34o8txkL6UlME1stWsUlRpTac6UE9Bx9gdJvnDXbIKhOJqBLX17fBjmposdrn6VTqim2w==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.24
+    dev: false
+
+  /@element-plus/icons/0.0.11:
+    resolution: {integrity: sha512-iKQXSxXu131Ai+I9Ymtcof9WId7kaXvB1+WRfAfpQCW7UiAMYgdNDqb/u0hgTo2Yq3MwC4MWJnNuTBEpG8r7+A==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    dev: false
+
   /@istanbuljs/load-nyc-config/1.1.0:
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
     engines: {node: '>=8'}
@@ -1428,6 +1447,10 @@ packages:
       chalk: 4.1.2
     dev: true
 
+  /@popperjs/core/2.11.0:
+    resolution: {integrity: sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==}
+    dev: false
+
   /@sinonjs/commons/1.8.3:
     resolution: {integrity: sha512-xkNcLAn/wZaX14RPlwizcKicDk9G3F8m2nU3L7Ukm5zBgTwiT0wsoFAHx9Jq56fJA1z/7uKGtCRu16sOUCLIHQ==}
     dependencies:
@@ -1614,6 +1637,37 @@ packages:
     resolution: {integrity: sha512-BUgRiZCkCrqDps5aQ9av05xcge3rn092ztKIh17tHkeEFgP4zfXMQWBA2zfdoCdCEdBL26xtOv+FZYiOp9RUDA==}
     dev: false
 
+  /@vueuse/core/7.4.1_vue@3.2.24:
+    resolution: {integrity: sha512-8UeLPCAieeQLXFHF1/28SIEK6ILLPb/4hp03hR+xkXF00gB/YUp0CEVcRAL9uQ8HTZa3S2T/jTISMc1ZjilM0A==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vueuse/shared': 7.4.1_vue@3.2.24
+      vue: 3.2.24
+      vue-demi: 0.12.1_vue@3.2.24
+    dev: false
+
+  /@vueuse/shared/7.4.1_vue@3.2.24:
+    resolution: {integrity: sha512-Pzb7XoHIcgPwwBJ5Ow9lZb0HTDyaLDV3pgxKauPGTMN9qvEylG06kUG+VTjJXkPsRtiGu46di8XyFeMw2dongA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.2.24
+      vue-demi: 0.12.1_vue@3.2.24
+    dev: false
+
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
     dev: true
@@ -1694,6 +1748,10 @@ packages:
     dependencies:
       sprintf-js: 1.0.3
     dev: true
+
+  /async-validator/4.0.7:
+    resolution: {integrity: sha512-Pj2IR7u8hmUEDOwB++su6baaRi+QvsgajuFB9j95foM1N2gy5HM4z60hfusIO0fBPG5uLAEl6yCJr1jNSVugEQ==}
+    dev: false
 
   /asynckit/0.4.0:
     resolution: {integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=}
@@ -2029,6 +2087,10 @@ packages:
       whatwg-url: 8.7.0
     dev: true
 
+  /dayjs/1.10.7:
+    resolution: {integrity: sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==}
+    dev: false
+
   /debug/4.3.3:
     resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==}
     engines: {node: '>=6.0'}
@@ -2090,6 +2152,24 @@ packages:
   /electron-to-chromium/1.4.27:
     resolution: {integrity: sha512-uZ95szi3zUbzRDx1zx/xnsCG+2xgZyy57pDOeaeO4r8zx5Dqe8Jv1ti8cunvBwJHVI5LzPuw8umKwZb3WKYxSQ==}
     dev: true
+
+  /element-plus/1.2.0-beta.6_vue@3.2.24:
+    resolution: {integrity: sha512-8EdSIR/5/FHcSB8w1diAh+gJMHgxIvxuZoayY99k6taAR1QyEFHuPTgFccZLopJ1+iP4UEsZFz49l57qS08Utw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@element-plus/icons-vue': 0.2.4_vue@3.2.24
+      '@popperjs/core': 2.11.0
+      '@vueuse/core': 7.4.1_vue@3.2.24
+      async-validator: 4.0.7
+      dayjs: 1.10.7
+      lodash: 4.17.21
+      memoize-one: 6.0.0
+      normalize-wheel-es: 1.1.1
+      vue: 3.2.24
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   /emittery/0.8.1:
     resolution: {integrity: sha512-uDfvUjVrfGJJhymx/kz6prltenw1u7WrCg1oa94zYY8xxVpLLUu045LAT0dhDZdXG58/EpPL/5kA180fQ/qudg==}
@@ -3232,7 +3312,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -3259,6 +3338,10 @@ packages:
     dependencies:
       tmpl: 1.0.5
     dev: true
+
+  /memoize-one/6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
+    dev: false
 
   /merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -3323,6 +3406,10 @@ packages:
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+
+  /normalize-wheel-es/1.1.1:
+    resolution: {integrity: sha512-157VNH4CngrcsvF8xOVOe22cwniIR3nxSltdctvQeHZj8JttEeOXffK28jucWfWBXs0QNetAumjc1GiInnwX4w==}
+    dev: false
 
   /npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -3890,6 +3977,21 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-demi/0.12.1_vue@3.2.24:
+    resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.24
+    dev: false
 
   /vue/3.2.24:
     resolution: {integrity: sha512-PvCklXNfcUMyeP/a9nME27C32IipwUDoS45rDyKn5+RQrWyjL+0JAJtf98HL6y9bfqQRTlYjSowWEB1nXxvG5Q==}
