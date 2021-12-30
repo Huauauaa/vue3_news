@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, onBeforeUnmount } from 'vue';
 import { Delete } from '@element-plus/icons';
 import { nanoid } from 'nanoid';
 import { ElMessage } from 'element-plus';
@@ -7,6 +7,12 @@ import { ElMessage } from 'element-plus';
 const state = reactive({
   loading: false,
   lines: [],
+});
+
+let timer;
+
+onBeforeUnmount(() => {
+  clearTimeout(timer);
 });
 
 class Line {
@@ -30,7 +36,7 @@ async function onTest(line) {
   try {
     line.loading = true;
     await new Promise((resolve) => {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         resolve(1);
       }, 2e3);
     });
