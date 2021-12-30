@@ -12,6 +12,7 @@ import VuexDemo from './components/VuexDemo.vue';
 import VuexDemo1 from './components/VuexDemo1.vue';
 import variables from './styles/variables';
 import IDBDemo from './components/IDBDemo.vue';
+import ClassDemo from './components/ClassDemo.vue';
 
 const isShowDemo = ref(true);
 
@@ -26,6 +27,7 @@ function onSwitchDemo() {
 
 <template>
   <div :style="variables">
+    <ClassDemo />
     <suspense><IDBDemo /></suspense>
 
     <VuexDemo1 />
