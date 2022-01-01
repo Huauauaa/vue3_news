@@ -7,6 +7,7 @@ specifiers:
   element-plus: ^1.2.0-beta.6
   jest: ^27.4.5
   nanoid: ^3.1.30
+  pinia: ^2.0.9
   sass: ^1.45.0
   vite: ^2.7.0
   vite-plugin-svg-icons: ^1.1.0
@@ -18,6 +19,7 @@ dependencies:
   '@element-plus/icons': 0.0.11
   element-plus: 1.2.0-beta.6_vue@3.2.24
   nanoid: 3.1.30
+  pinia: 2.0.9_vue@3.2.24
   sass: 1.45.0
   vue: 3.2.24
   vuedraggable: 4.1.0_vue@3.2.24
@@ -1603,6 +1605,10 @@ packages:
 
   /@vue/devtools-api/6.0.0-beta.20.1:
     resolution: {integrity: sha512-R2rfiRY+kZugzWh9ZyITaovx+jpU4vgivAEAiz80kvh3yviiTU3CBuGuyWpSwGz9/C7TkSWVM/FtQRGlZ16n8Q==}
+    dev: false
+
+  /@vue/devtools-api/6.0.0-beta.21.1:
+    resolution: {integrity: sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==}
     dev: false
 
   /@vue/reactivity/3.2.24:
@@ -4215,6 +4221,23 @@ packages:
   /picomatch/2.3.0:
     resolution: {integrity: sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==}
     engines: {node: '>=8.6'}
+
+  /pinia/2.0.9_vue@3.2.24:
+    resolution: {integrity: sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.0.0-beta.21.1
+      vue: 3.2.24
+      vue-demi: 0.12.1_vue@3.2.24
+    dev: false
 
   /pirates/4.0.4:
     resolution: {integrity: sha512-ZIrVPH+A52Dw84R0L3/VS9Op04PuQ2SEoJL6bkshmiTic/HldyW9Tf7oH5mhJZBK7NmDx27vSMrYEXPXclpDKw==}

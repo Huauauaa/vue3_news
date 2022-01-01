@@ -14,6 +14,7 @@ import variables from './styles/variables';
 import IDBDemo from './components/IDBDemo.vue';
 import ClassDemo from './components/ClassDemo.vue';
 import AddLine from './components/AddLine.vue';
+import PiniaDemo from './components/demo/PiniaDemo.vue';
 
 const isShowDemo = ref(true);
 
@@ -28,6 +29,7 @@ function onSwitchDemo() {
 
 <template>
   <div :style="variables">
+    <PiniaDemo />
     <SvgIcon name="like" />
     <AddLine />
     <ClassDemo />
