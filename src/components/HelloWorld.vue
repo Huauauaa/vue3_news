@@ -62,6 +62,7 @@ watchEffect(() => {
 </script>
 
 <template>
+  <SvgIcon name="like" />
   <slot name="name"></slot>
   <slot name="version"></slot>
   <p class="msg">msg: {{ msg }}</p>

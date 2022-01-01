@@ -14,7 +14,6 @@ import variables from './styles/variables';
 import IDBDemo from './components/IDBDemo.vue';
 import ClassDemo from './components/ClassDemo.vue';
 import AddLine from './components/AddLine.vue';
-import SvgIcon from './components/SvgIcon.vue';
 
 const isShowDemo = ref(true);
 
