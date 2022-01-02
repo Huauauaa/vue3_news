@@ -1,7 +1,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import DraggableDemo from './components/DraggableDemo.vue';
 import DraggableDemo1 from './components/DraggableDemo1.vue';
@@ -25,6 +25,18 @@ function say() {
 function onSwitchDemo() {
   isShowDemo.value = !isShowDemo.value;
 }
+
+onMounted(async () => {
+  try {
+    const response = await fetch('/api/getRoleById?id=2');
+    const response1 = await fetch('/api/user');
+    const data = await response.json();
+    const data1 = await response1.json();
+    console.log('mock data', data, data1);
+  } catch (error) {
+    console.error(error);
+  }
+});
 </script>
 
 <template>
