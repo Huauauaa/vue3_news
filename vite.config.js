@@ -40,5 +40,8 @@ export default ({ mode, command }) => {
         },
       },
     },
+    build: {
+      sourcemap: true,
+    },
   });
 };
