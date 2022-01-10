@@ -15,6 +15,7 @@ import IDBDemo from './components/IDBDemo.vue';
 import ClassDemo from './components/ClassDemo.vue';
 import AddLine from './components/AddLine.vue';
 import PiniaDemo from './components/demo/PiniaDemo.vue';
+import DayjsDemo from './components/demo/DayjsDemo.vue';
 
 const isShowDemo = ref(true);
 
@@ -41,6 +42,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <DayjsDemo />
     <PiniaDemo />
     <SvgIcon name="like" />
     <AddLine />
