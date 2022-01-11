@@ -1,11 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@antv/x6': ^1.29.5
   '@babel/preset-env': ^7.16.5
   '@element-plus/icons': ^0.0.11
   '@vitejs/plugin-vue': ^1.10.2
   dayjs: ^1.10.7
   element-plus: ^1.2.0-beta.6
+  insert-css: ^2.0.0
   jest: ^27.4.5
   mockjs: ^1.1.0
   nanoid: ^3.1.30
@@ -19,9 +21,11 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
+  '@antv/x6': 1.29.5
   '@element-plus/icons': 0.0.11
   dayjs: 1.10.7
   element-plus: 1.2.0-beta.6_vue@3.2.24
+  insert-css: 2.0.0
   mockjs: 1.1.0
   nanoid: 3.1.30
   pinia: 2.0.9_vue@3.2.24
@@ -39,6 +43,17 @@ devDependencies:
   vite-plugin-svg-icons: 1.1.0_vite@2.7.1
 
 packages:
+
+  /@antv/x6/1.29.5:
+    resolution: {integrity: sha512-U5gg40jo+UtzjdX/7QFenVZgGKOtDFDo60AMNGEvIEzGnixV+2zV0EBJ2f8We4Fp1ZVP0G2pm6uS7ajuuuLsvg==}
+    dependencies:
+      csstype: 3.0.10
+      jquery: 3.6.0
+      jquery-mousewheel: 3.1.13
+      lodash-es: 4.17.21
+      mousetrap: 1.6.5
+      utility-types: 3.10.0
+    dev: false
 
   /@babel/code-frame/7.16.0:
     resolution: {integrity: sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==}
@@ -2358,6 +2373,10 @@ packages:
     resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==}
     dev: false
 
+  /csstype/3.0.10:
+    resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
+    dev: false
+
   /data-urls/2.0.0:
     resolution: {integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==}
     engines: {node: '>=10'}
@@ -3199,6 +3218,10 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
 
+  /insert-css/2.0.0:
+    resolution: {integrity: sha1-610Ql7dUL0x56jBg067gfQU4gPQ=}
+    dev: false
+
   /is-accessor-descriptor/0.1.6:
     resolution: {integrity: sha1-qeEss66Nh2cn7u84Q/igiXtcmNY=}
     engines: {node: '>=0.10.0'}
@@ -3888,6 +3911,14 @@ packages:
       - utf-8-validate
     dev: true
 
+  /jquery-mousewheel/3.1.13:
+    resolution: {integrity: sha1-BvAzXxbjU6aV5yBr9QUDy1I6buU=}
+    dev: false
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
+
   /js-base64/2.6.4:
     resolution: {integrity: sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==}
     dev: true
@@ -4038,6 +4069,10 @@ packages:
       p-locate: 4.1.0
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
     dev: true
@@ -4174,6 +4209,10 @@ packages:
     hasBin: true
     dependencies:
       commander: 7.2.0
+    dev: false
+
+  /mousetrap/1.6.5:
+    resolution: {integrity: sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==}
     dev: false
 
   /ms/2.0.0:
@@ -5168,6 +5207,11 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
+
+  /utility-types/3.10.0:
+    resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
+    engines: {node: '>= 4'}
+    dev: false
 
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}

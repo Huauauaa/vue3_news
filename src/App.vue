@@ -16,6 +16,7 @@ import ClassDemo from './components/ClassDemo.vue';
 import AddLine from './components/AddLine.vue';
 import PiniaDemo from './components/demo/PiniaDemo.vue';
 import DayjsDemo from './components/demo/DayjsDemo.vue';
+import AntVX6 from './components/demo/AntVX6.vue';
 
 const isShowDemo = ref(true);
 
@@ -42,6 +43,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <AntVX6 />
     <DayjsDemo />
     <PiniaDemo />
     <SvgIcon name="like" />
