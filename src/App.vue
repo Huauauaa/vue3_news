@@ -17,6 +17,7 @@ import AddLine from './components/AddLine.vue';
 import PiniaDemo from './components/demo/PiniaDemo.vue';
 import DayjsDemo from './components/demo/DayjsDemo.vue';
 import AntVX6 from './components/demo/AntVX6.vue';
+import ProgressBar from './components/ProgressBar.vue';
 
 const isShowDemo = ref(true);
 
@@ -43,6 +44,16 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <ProgressBar
+      :data="[
+        { label: 'a', value: 0 },
+        { label: 'b', value: 2 },
+        { label: 'c', value: 3 },
+        { label: 'd', value: 4 },
+      ]"
+    >
+      <template #legend> 1 </template>
+    </ProgressBar>
     <AntVX6 />
     <DayjsDemo />
     <PiniaDemo />
