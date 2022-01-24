@@ -18,6 +18,7 @@ import PiniaDemo from './components/demo/PiniaDemo.vue';
 import DayjsDemo from './components/demo/DayjsDemo.vue';
 import AntVX6 from './components/demo/AntVX6.vue';
 import ProgressBar from './components/ProgressBar.vue';
+import PropsTest from './components/syntax/PropsTest.vue';
 
 const isShowDemo = ref(true);
 
@@ -44,6 +45,10 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <PropsTest name="null" :value="null" :value1="null" />
+    <PropsTest name="undefined" :value="undefined" :value1="undefined" />
+    <PropsTest name="normal" value="foo" value1="foo" />
+    <PropsTest name="empty" />
     <ProgressBar
       :data="[
         { label: 'a', value: 0 },
