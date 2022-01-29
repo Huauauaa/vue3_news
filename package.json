@@ -1,6 +1,6 @@
 {
   "name": "vue3_news",
-  "version": "0.0.2",
+  "version": "0.0.3-0",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
