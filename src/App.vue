@@ -21,6 +21,7 @@ import ProgressBar from './components/ProgressBar.vue';
 import PropsTest from './components/syntax/PropsTest.vue';
 import ElementDemo from './components/element/ElementDemo.vue';
 import Modifiers from './components/syntax/Modifiers.vue';
+import HTMLSandbox from './components/html/HTMLSandbox.vue';
 
 const isShowDemo = ref(true);
 
@@ -47,6 +48,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <HTMLSandbox />
     <fieldset>
       <legend>vue3 Syntax</legend>
       <Modifiers />
