@@ -52,25 +52,28 @@ const inputmodeValues = [
 
     <footer><p translate="yes">Printing Works, Inc</p></footer>
 
-    <img src="https://cdn.mysite.com/media/image.jpg" loading="lazy" />
-
     <img
-      src="imageafound.png"
-      onerror="this.onerror=null;this.src='imagenotfound.png';"
+      src="https://images.dog.ceo/breeds/coonhound/n02089078_2962.jpg"
+      loading="lazy"
     />
 
-    <video
-      src="https://cdn.mysite.com/media/video.mp4"
-      poster="image.png"
-    ></video>
-
-    <audio controls><source src="track11.mp3" type="audio/mpeg" /></audio>
+    <!-- <img
+      src="imageafound.png"
+      onerror="this.onerror=null;this.src='imagenotfound.png';"
+    /> -->
 
     <video
-      autoplaysrc="https://cdn.mysite.com/media/myvideo.mp4"
-      poster="image.png"
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      poster="https://images.dog.ceo/breeds/coonhound/n02089078_2962.jpg"
     ></video>
-    <audio loop><source src="track323.mp3" type="audio/mpeg" /></audio>
+
+    <audio controls><source src="./demo.mp3" type="audio/mpeg" /></audio>
+
+    <video
+      autoplaysrc="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      poster="https://images.dog.ceo/breeds/coonhound/n02089078_2962.jpg"
+    ></video>
+    <audio loop><source src="./demo.mp3" type="audio/mpeg" /></audio>
 
     <blockquote cite="https://mysite.com/original-source-url">
       <p>Some awesome quote</p>
