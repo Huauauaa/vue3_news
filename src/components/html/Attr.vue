@@ -86,8 +86,6 @@ const inputmodeValues = [
     <p>
       I will evaluate the completion on <time datetime="2021-12-31"> </time>.
     </p>
-    <!-- <script src="script.js" async></script>
-    <script src="script.js" defer></script> -->
 
     <!-- <script>
       const allowDrop = (e) => e.preventDefault();
