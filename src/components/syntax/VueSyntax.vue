@@ -1,0 +1,17 @@
+<script setup>
+import Modifiers from './Modifiers.vue';
+import PropsTest from './PropsTest.vue';
+</script>
+
+<template>
+  <fieldset>
+    <legend>VueSyntax</legend>
+    <Modifiers></Modifiers>
+    <PropsTest name="null" :value="null" :value1="null" />
+    <PropsTest name="undefined" :value="undefined" :value1="undefined" />
+    <PropsTest name="normal" value="foo" value1="foo" />
+    <PropsTest name="empty" />
+  </fieldset>
+</template>
+
+<style scoped></style>
