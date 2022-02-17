@@ -21,6 +21,7 @@ import ProgressBar from './components/ProgressBar.vue';
 import ElementDemo from './components/element/ElementDemo.vue';
 import HTMLSandbox from './components/html/HTMLSandbox.vue';
 import VueSyntax from './components/syntax/VueSyntax.vue';
+import Tree from './components/demo/Tree.vue';
 
 const isShowDemo = ref(true);
 
@@ -47,6 +48,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <Tree></Tree>
     <VueSyntax></VueSyntax>
     <HTMLSandbox />
     <ElementDemo />
