@@ -2,11 +2,13 @@
 import Modifiers from './Modifiers.vue';
 import PropsTest from './PropsTest.vue';
 import KeepAliveDemo from './KeepAliveDemo.vue';
+import ComputedWatch from './ComputedWatch.vue';
 </script>
 
 <template>
   <fieldset>
     <legend>VueSyntax</legend>
+    <ComputedWatch></ComputedWatch>
     <KeepAliveDemo></KeepAliveDemo>
     <Modifiers></Modifiers>
     <PropsTest name="null" :value="null" :value1="null" />
