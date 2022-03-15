@@ -3,6 +3,7 @@ import Modifiers from './Modifiers.vue';
 import PropsTest from './PropsTest.vue';
 import KeepAliveDemo from './KeepAliveDemo.vue';
 import ComputedWatch from './ComputedWatch.vue';
+const legendColor = 'red';
 </script>
 
 <template>
@@ -18,4 +19,8 @@ import ComputedWatch from './ComputedWatch.vue';
   </fieldset>
 </template>
 
-<style scoped></style>
+<style scoped>
+legend {
+  color: v-bind(legendColor);
+}
+</style>
