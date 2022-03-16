@@ -7,12 +7,15 @@ import 'element-plus/dist/index.css';
 import 'virtual:svg-icons-register';
 import SvgIcon from './components/SvgIcon.vue';
 import { createPinia } from 'pinia';
+import Vue3Tour from 'vue3-tour';
+import 'vue3-tour/dist/vue3-tour.css';
 
 console.log('util', util);
 
 const app = createApp(App);
 app.component('SvgIcon', SvgIcon);
 app.use(store);
+app.use(Vue3Tour);
 app.use(ElementPlus);
 app.use(createPinia());
 
