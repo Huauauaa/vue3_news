@@ -50,6 +50,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <OrgStructure></OrgStructure>
     <VueTourDemo></VueTourDemo>
     <Tree></Tree>
     <VueSyntax></VueSyntax>
