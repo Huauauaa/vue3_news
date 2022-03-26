@@ -1,14 +1,21 @@
 <script setup>
+import { ref } from 'vue';
 import Modifiers from './Modifiers.vue';
 import PropsTest from './PropsTest.vue';
 import KeepAliveDemo from './KeepAliveDemo.vue';
 import ComputedWatch from './ComputedWatch.vue';
+import ComputedTest from './ComputedTest.vue';
+import AccessingProps from './AccessingProps.vue';
 const legendColor = 'red';
+const count = ref(10);
 </script>
 
 <template>
   <fieldset>
     <legend>VueSyntax</legend>
+    <input v-model.number="count" />
+    <AccessingProps title="accessing props" :count="count"></AccessingProps>
+    <ComputedTest></ComputedTest>
     <ComputedWatch></ComputedWatch>
     <KeepAliveDemo></KeepAliveDemo>
     <Modifiers></Modifiers>
