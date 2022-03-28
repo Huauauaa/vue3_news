@@ -6,6 +6,7 @@ import KeepAliveDemo from './KeepAliveDemo.vue';
 import ComputedWatch from './ComputedWatch.vue';
 import ComputedTest from './ComputedTest.vue';
 import AccessingProps from './AccessingProps.vue';
+import BuiltIns from './BuiltIns.vue';
 const legendColor = 'red';
 const count = ref(10);
 </script>
@@ -13,6 +14,7 @@ const count = ref(10);
 <template>
   <fieldset>
     <legend>VueSyntax</legend>
+    <BuiltIns></BuiltIns>
     <input v-model.number="count" />
     <AccessingProps title="accessing props" :count="count"></AccessingProps>
     <ComputedTest></ComputedTest>
