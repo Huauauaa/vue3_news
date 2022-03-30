@@ -21,7 +21,7 @@
     "unplugin-vue-components": "^0.18.5",
     "vue": "^3.2.31",
     "vue3-tour": "^0.2.0",
-    "vuedraggable": "^2.24.3",
+    "vuedraggable": "^4.1.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
