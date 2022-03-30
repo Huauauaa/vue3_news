@@ -25,6 +25,7 @@ import Tree from './components/demo/Tree.vue';
 import OrgStructure from './components/demo/OrgStructure.vue';
 import VueTourDemo from './components/demo/VueTourDemo.vue';
 import IconDemo from './components/demo/IconDemo.vue';
+import ColorIconDemo from './components/demo/ColorIconDemo.vue';
 
 const isShowDemo = ref(true);
 
@@ -51,6 +52,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <ColorIconDemo></ColorIconDemo>
     <IconDemo></IconDemo>
     <OrgStructure></OrgStructure>
     <VueTourDemo></VueTourDemo>
