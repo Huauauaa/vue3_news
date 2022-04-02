@@ -26,6 +26,7 @@ import OrgStructure from './components/demo/OrgStructure.vue';
 import VueTourDemo from './components/demo/VueTourDemo.vue';
 import IconDemo from './components/demo/IconDemo.vue';
 import ColorIconDemo from './components/demo/ColorIconDemo.vue';
+import CustomComponent from './components/custom/CustomComponent.vue';
 
 const isShowDemo = ref(true);
 
@@ -47,11 +48,13 @@ onMounted(async () => {
   } catch (error) {
     console.error(error);
   }
+  document.querySelector('html').scrollTop = 0;
 });
 </script>
 
 <template>
   <div :style="variables">
+    <CustomComponent></CustomComponent>
     <ColorIconDemo></ColorIconDemo>
     <IconDemo></IconDemo>
     <OrgStructure></OrgStructure>
