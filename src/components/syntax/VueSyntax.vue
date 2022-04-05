@@ -1,12 +1,16 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, defineAsyncComponent } from 'vue';
 import Modifiers from './Modifiers.vue';
 import PropsTest from './PropsTest.vue';
 import KeepAliveDemo from './KeepAliveDemo.vue';
 import ComputedWatch from './ComputedWatch.vue';
 import ComputedTest from './ComputedTest.vue';
-import AccessingProps from './AccessingProps.vue';
 import BuiltIns from './BuiltIns.vue';
+import AccessingProps from './AccessingProps.vue';
+import TemplateDemo from './template-demo';
+
+const CountDemo = defineAsyncComponent(() => import('./CountDemo.vue'));
+
 const legendColor = 'red';
 const count = ref(10);
 </script>
@@ -14,6 +18,10 @@ const count = ref(10);
 <template>
   <fieldset>
     <legend>VueSyntax</legend>
+    <component :is="CountDemo" />
+    <CountDemo></CountDemo>
+    <TemplateDemo></TemplateDemo>
+    <component :is="BuiltIns" />
     <BuiltIns></BuiltIns>
     <input v-model.number="count" />
     <AccessingProps title="accessing props" :count="count"></AccessingProps>
