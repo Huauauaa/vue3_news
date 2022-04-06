@@ -27,6 +27,7 @@ import VueTourDemo from './components/demo/VueTourDemo.vue';
 import IconDemo from './components/demo/IconDemo.vue';
 import ColorIconDemo from './components/demo/ColorIconDemo.vue';
 import CustomComponent from './components/custom/CustomComponent.vue';
+import FateTest from './components/fate/FateTest.vue';
 
 const isShowDemo = ref(true);
 
@@ -54,7 +55,13 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
-    <CustomComponent></CustomComponent>
+    <fieldset>
+      <legend>Fate</legend>
+      <FateTest></FateTest>
+      <Combination></Combination>
+      <CustomComponent></CustomComponent>
+    </fieldset>
+
     <ColorIconDemo></ColorIconDemo>
     <IconDemo></IconDemo>
     <OrgStructure></OrgStructure>
