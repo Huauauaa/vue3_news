@@ -7,8 +7,18 @@ export const com1 = defineAsyncComponent(() =>
 
 export const coms = [
   {
+    component: defineAsyncComponent(() => import('./FateGroup.vue')),
+    options: {
+      name: 'Button',
+      label: 'form coms',
+      onFoo: () => {
+        console.log('onFoo', 'coms');
+      },
+    },
+  },
+  {
     name: 'button',
-    component: defineAsyncComponent(() => import('./CompositionButton.vue')),
+    component: defineAsyncComponent(() => import('./OptionalButton.vue')),
   },
   {
     name: 'input',

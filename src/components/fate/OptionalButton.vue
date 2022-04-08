@@ -12,6 +12,13 @@ export default {
       type: String,
       default: 'btn',
     },
+    options: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
+  created() {
+    console.log('options', this.options);
   },
   methods: {
     foo() {

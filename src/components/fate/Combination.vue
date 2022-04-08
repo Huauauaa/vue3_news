@@ -12,10 +12,13 @@ console.log(com1, typeof com1);
   <hr />
   <component :is="com1"></component>
   <hr />
+  <h2>coms list</h2>
   <component
     v-for="item in coms"
     :key="item.name"
+    :options="item.options"
     :is="item.component"
   ></component>
+  <h2>coms list</h2>
 </template>
 <style scoped></style>
