@@ -28,6 +28,7 @@ import IconDemo from './components/demo/IconDemo.vue';
 import ColorIconDemo from './components/demo/ColorIconDemo.vue';
 import CustomComponent from './components/custom/CustomComponent.vue';
 import FateTest from './components/fate/FateTest.vue';
+import FateTest2 from './components/fate/FateTest2.vue';
 
 const isShowDemo = ref(true);
 
@@ -57,6 +58,7 @@ onMounted(async () => {
   <div :style="variables">
     <fieldset>
       <legend>Fate</legend>
+      <FateTest2></FateTest2>
       <FateTest></FateTest>
       <Combination></Combination>
       <CustomComponent></CustomComponent>

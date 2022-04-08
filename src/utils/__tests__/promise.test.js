@@ -5,3 +5,11 @@ test('promise', async () => {
   console.log(JSON.parse(JSON.stringify(p)));
   console.log(p.map((item) => item * 2));
 });
+
+test('object', async () => {
+  const foo = { id: 1 };
+  const name = 'id';
+
+  console.log(foo[name]);
+  console.log('first'.startsWith('ff'));
+});

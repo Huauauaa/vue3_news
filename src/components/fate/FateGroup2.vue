@@ -1,13 +1,13 @@
 <script>
 import { defineAsyncComponent, h } from 'vue';
-import FateButton from './FateButton.vue';
+import CompositionButton from './CompositionButton.vue';
 
 const FateTable = defineAsyncComponent(() => import('./FateTable.vue'));
 
 export default {
   name: 'FateGroup2',
   components: {
-    FateButton,
+    CompositionButton,
     FateInput: defineAsyncComponent(() => import('./FateInput.vue')),
   },
   props: {
@@ -20,11 +20,11 @@ export default {
     console.log({ props });
     return () =>
       h('div', { style: { backgroundColor: 'lightblue' } }, [
-        h(FateButton),
+        h(CompositionButton),
         h('FateInput'),
-        h(FateButton),
+        h(CompositionButton),
         h(FateTable),
-        h(FateButton),
+        h(CompositionButton),
         // h(FateInput),
         h('FateTable'),
       ]);

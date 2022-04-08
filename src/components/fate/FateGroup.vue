@@ -1,6 +1,6 @@
 <script setup>
 import { h } from 'vue';
-import FateButton from './FateButton.vue';
+import CompositionButton from './CompositionButton.vue';
 import FateInput from './FateInput.vue';
 const props = defineProps({ name: { type: String, required: true } });
 
@@ -11,7 +11,7 @@ const Com = () => {
     case 'Input':
       return h(FateInput);
     case 'Button':
-      return h(FateButton);
+      return h(CompositionButton);
 
     default:
       return h('div');
