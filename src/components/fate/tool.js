@@ -9,6 +9,7 @@ export const coms = [
   {
     component: defineAsyncComponent(() => import('./FateGroup.vue')),
     options: {
+      component: defineAsyncComponent(() => import('./OptionalButton.vue')),
       name: 'Button',
       label: 'form coms',
       onFoo: () => {

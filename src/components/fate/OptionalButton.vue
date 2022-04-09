@@ -1,5 +1,10 @@
 <template>
-  <div @click.stop="foo">{{ label }}</div>
+  <div
+    @click.stop="foo"
+    style="border: 3px solid #00f; display: inline-block; padding: 0 5px"
+  >
+    {{ label }}
+  </div>
 </template>
 
 <script>

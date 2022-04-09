@@ -49,6 +49,7 @@ declare module 'vue' {
     PiniaDemo: typeof import('./src/components/demo/PiniaDemo.vue')['default']
     ProgressBar: typeof import('./src/components/ProgressBar.vue')['default']
     PropsTest: typeof import('./src/components/syntax/PropsTest.vue')['default']
+    RefGroup: typeof import('./src/components/fate/RefGroup.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon.vue')['default']
     SwitchDemo: typeof import('./src/components/element/SwitchDemo.vue')['default']
     Tree: typeof import('./src/components/demo/Tree.vue')['default']

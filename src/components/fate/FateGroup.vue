@@ -19,7 +19,7 @@ const Com = () => {
       return h(FateInput);
     case 'Button':
       console.log('FateGroup OptionalButton', OptionalButton);
-      return h(OptionalButton, {
+      return h(props.options.component, {
         label: 'mock group',
         // on + 首字母大写,才能emit
         onFoo: () => {

@@ -1,3 +1,5 @@
+import c from '../c';
+
 const foo = {
   refresh: (...args) => {
     console.log(args);
@@ -7,4 +9,7 @@ const foo = {
 test('function', () => {
   console.log(typeof foo.refresh);
   foo.refresh({ id: 1 });
+
+  console.log(c);
+  c();
 });
