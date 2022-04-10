@@ -29,6 +29,7 @@ import ColorIconDemo from './components/demo/ColorIconDemo.vue';
 import CustomComponent from './components/custom/CustomComponent.vue';
 import FateTest from './components/fate/FateTest.vue';
 import FateTest2 from './components/fate/FateTest2.vue';
+import DirectiveDashboard from './components/directive/DirectiveDashboard.vue';
 
 const isShowDemo = ref(true);
 
@@ -56,6 +57,7 @@ onMounted(async () => {
 
 <template>
   <div :style="variables">
+    <DirectiveDashboard></DirectiveDashboard>
     <fieldset>
       <legend>Fate</legend>
       <FateTest2></FateTest2>
