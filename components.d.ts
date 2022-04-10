@@ -26,6 +26,7 @@ declare module 'vue' {
     DatePickerDemo: typeof import('./src/components/element/DatePickerDemo.vue')['default']
     DayjsDemo: typeof import('./src/components/demo/DayjsDemo.vue')['default']
     Demo: typeof import('./src/components/Demo.vue')['default']
+    DialogDemo: typeof import('./src/components/element/DialogDemo.vue')['default']
     DirectiveDashboard: typeof import('./src/components/directive/DirectiveDashboard.vue')['default']
     Dog: typeof import('./src/components/Dog.vue')['default']
     DraggableDemo: typeof import('./src/components/DraggableDemo.vue')['default']
