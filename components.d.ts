@@ -54,6 +54,7 @@ declare module 'vue' {
     RefGroup: typeof import('./src/components/fate/RefGroup.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon.vue')['default']
     SwitchDemo: typeof import('./src/components/element/SwitchDemo.vue')['default']
+    TodoList: typeof import('./src/components/todo/TodoList.vue')['default']
     Tree: typeof import('./src/components/demo/Tree.vue')['default']
     VisibleDemo: typeof import('./src/components/directive/VisibleDemo.vue')['default']
     VueSyntax: typeof import('./src/components/syntax/VueSyntax.vue')['default']
