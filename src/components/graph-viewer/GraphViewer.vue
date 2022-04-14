@@ -1,67 +1,10 @@
 <script>
 import { h, onMounted, ref } from 'vue';
 import { Graph } from '@antv/x6';
+import { register, registerFlagBearer } from '../../hooks/userGraphViewer';
 
-const ports = {
-  items: [
-    { group: 'in', id: 'in1' },
-    { group: 'out', id: 'out1' },
-  ],
-  groups: {
-    in: {
-      position: { name: 'top' },
-      zIndex: 1,
-    },
-    out: {
-      position: { name: 'bottom' },
-      zIndex: 1,
-    },
-  },
-};
-
-Graph.registerNode(
-  'locomotive',
-  {
-    inherit: 'rect',
-    width: 200,
-    height: 36,
-    attrs: {
-      body: {
-        strokeWidth: 1,
-        stroke: '#0f0',
-        fill: '#aaa',
-      },
-      text: {
-        fontSize: 12,
-        fill: '#ddd',
-      },
-    },
-    ports: { ...ports },
-  },
-  true
-);
-
-Graph.registerNode(
-  'compartment',
-  {
-    inherit: 'rect',
-    width: 200,
-    height: 36,
-    attrs: {
-      body: {
-        strokeWidth: 1,
-        stroke: '#0f0',
-        fill: '#EFF4FF',
-      },
-      text: {
-        fontSize: 12,
-        fill: '#262626',
-      },
-    },
-    ports: { ...ports },
-  },
-  true
-);
+register();
+registerFlagBearer();
 
 export default {
   name: 'GraphViewer',
@@ -74,10 +17,13 @@ export default {
     function add(...args) {
       const existNodes = graph.getNodes();
       const target = graph.addNode({
-        x: 0,
-        y: 0,
-        shape: 'locomotive',
-        label: 'foo',
+        x: 100,
+        y: 100,
+        shape: 'flagBearer',
+        data: {
+          label: 'host',
+          role: 'host',
+        },
       });
 
       if (existNodes.length > 0) {

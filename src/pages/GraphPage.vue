@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import GraphViewer from '../components/GraphViewer.vue';
+import GraphViewer from '../components/graph-viewer/GraphViewer.vue';
 
 const GraphViewerRef = ref();
 function onAdd() {

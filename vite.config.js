@@ -17,9 +17,20 @@ export default ({ mode, command }) => {
   return defineConfig({
     base: './',
     resolve: {
-      alias: {
-        '~/': `${path.resolve(__dirname, 'src')}/`,
-      },
+      alias: [
+        {
+          find: '~/',
+          replacement: `${path.resolve(__dirname, 'src')}/`,
+        },
+        {
+          find: '@antv/x6',
+          replacement: '@antv/x6/lib',
+        },
+        {
+          find: '@antv/x6-vue-shape',
+          replacement: '@antv/x6-vue-shape/lib',
+        },
+      ],
     },
     plugins: [
       vue(),
