@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import lodash from 'lodash';
 import App from './App.vue';
 import util from './utils';
 import store from './store';
@@ -20,5 +21,6 @@ app.use(store);
 app.use(Vue3Tour);
 app.use(ElementPlus);
 app.use(createPinia());
-
+app.config.globalProperties.lodash = lodash;
+app.config.globalProperties.msg = 'hello';
 app.mount('#app');
