@@ -10,7 +10,6 @@
       <router-link to="/test">Go to Test</router-link>
       <router-link to="/h-todo">h-todo</router-link>
       <router-link to="/tour">tour</router-link>
-      <router-link to="/graph">graph</router-link>
     </nav>
 
     <router-view></router-view>
