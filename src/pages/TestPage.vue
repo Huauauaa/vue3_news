@@ -14,7 +14,7 @@ import ClassDemo from '../components/ClassDemo.vue';
 import AddLine from '../components/AddLine.vue';
 import PiniaDemo from '../components/demo/PiniaDemo.vue';
 import DayjsDemo from '../components/demo/DayjsDemo.vue';
-import AntVX6 from '../components/demo/AntVX6.vue';
+// import AntVX6 from '../components/demo/AntVX6.vue';
 import ProgressBar from '../components/ProgressBar.vue';
 import ElementDemo from '../components/element/ElementDemo.vue';
 import HTMLSandbox from '../components/html/HTMLSandbox.vue';
@@ -85,7 +85,7 @@ onMounted(async () => {
       <template #legend> 1 </template>
     </ProgressBar>
 
-    <AntVX6 />
+    <!-- <AntVX6 /> -->
     <DayjsDemo />
     <PiniaDemo />
     <SvgIcon name="like" />

@@ -57,6 +57,7 @@ declare module 'vue' {
     ProgressBar: typeof import('./src/components/ProgressBar.vue')['default']
     PropsTest: typeof import('./src/components/syntax/PropsTest.vue')['default']
     RefGroup: typeof import('./src/components/fate/RefGroup.vue')['default']
+    SubmitButton: typeof import('./src/components/syntax/cases/SubmitButton.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon.vue')['default']
     SwitchDemo: typeof import('./src/components/element/SwitchDemo.vue')['default']
     TemplateSyntax: typeof import('./src/components/syntax/TemplateSyntax.vue')['default']

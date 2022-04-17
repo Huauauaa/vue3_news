@@ -23,4 +23,5 @@ app.use(ElementPlus);
 app.use(createPinia());
 app.config.globalProperties.lodash = lodash;
 app.config.globalProperties.msg = 'hello';
+app.provide('author', 'Harvey');
 app.mount('#app');

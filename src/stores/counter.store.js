@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export default defineStore('counter', {
+const useCounterStore = defineStore('counter', {
   state: () => {
     return { count: 0 };
   },
@@ -10,3 +10,5 @@ export default defineStore('counter', {
     },
   },
 });
+
+export default useCounterStore;
