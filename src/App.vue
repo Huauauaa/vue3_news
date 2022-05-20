@@ -11,6 +11,8 @@
       <router-link to="/h-todo">h-todo</router-link>
       <router-link to="/tour">tour</router-link>
       <router-link to="/Essentials">Essentials</router-link>
+      <router-link to="/vue2/1">vue2</router-link>
+      <router-link to="/vue-router/1">router</router-link>
     </nav>
 
     <router-view></router-view>
