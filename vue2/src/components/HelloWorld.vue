@@ -11,13 +11,16 @@ export default {
     msg: String,
   },
   data() {
-    return { name: 'foo', searchParams: {} };
+    return { env: 'other' };
+  },
+  computed: {
+    searchParams() {
+      return searchParams(this);
+    },
   },
   created() {
-    this.searchParams = searchParams(this);
     console.log('this.searchParams.config', this.searchParams.config);
-    this.name = 'bar';
-    this.searchParams = searchParams(this);
+    this.env = 'ningxia';
     console.log('this.searchParams.config', this.searchParams.config);
   },
 };
