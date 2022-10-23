@@ -1003,10 +1003,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@harvey0379/maojian@^0.0.2-1":
-  version "0.0.2-1"
-  resolved "https://registry.yarnpkg.com/@harvey0379/maojian/-/maojian-0.0.2-1.tgz#ef7437bc797c1e046bc73878118170385d200272"
-  integrity sha512-FWdCPjSSa3IwhueBPMHqmcmf0VbnTDlpTYbb3AJw+/I5kRC0gAfrQFXsv/SBcqKqJtbwn4pbCwWQxyVV7nDNNg==
+"@harvey0379/maojian@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@harvey0379/maojian/-/maojian-0.0.2.tgz#59fe226f4b6e0279357982a7ad297a38256950b3"
+  integrity sha512-QwAwD3XfuUPlARUZvk8FP5O+yFJfqfYTBioKedKBxVxq+auNuiwsfoMLPIo5S48A3GLVcm/d0Sl+T4ybvAwd5A==
 
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
