@@ -1,11 +1,6 @@
-<script setup lang="ts">
-import PostPage from './components/PostPage.vue'
-import AlbumPage from './components/AlbumPage.vue'
-</script>
-
 <template>
-  <PostPage></PostPage>
-  <AlbumPage></AlbumPage>
+  <TableStage></TableStage>
 </template>
-
-<style scoped></style>
+<script setup lang="ts">
+import TableStage from '@/views/TableStage.vue'
+</script>
