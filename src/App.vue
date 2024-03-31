@@ -1,11 +1,12 @@
-<script setup lang="ts">
-import PostPage from './components/PostPage.vue'
-import AlbumPage from './components/AlbumPage.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <PostPage></PostPage>
-  <AlbumPage></AlbumPage>
+  <a>链接</a>
+  <el-button type="primary">app</el-button>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+a {
+  color: $color-primary;
+}
+</style>
