@@ -1,4 +1,5 @@
 <template>
+  <ElTableDemo :tableData="tableData" />
   <TsxTable :tableData="tableData" :columns="columns"></TsxTable>
   <VueTable :tableData="tableData" :columns="columns"></VueTable>
 </template>
@@ -6,6 +7,7 @@
 <script setup lang="ts">
 import VueTable from '@/components/tables/VueTable.vue'
 import TsxTable from '@/components/tables/TsxTable'
+import ElTableDemo from './ElTableDemo'
 import { ElButton, TableColumnCtx } from 'element-plus'
 import { h } from 'vue'
 
