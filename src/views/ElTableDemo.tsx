@@ -1,6 +1,7 @@
-import { ElButton, ElMessage } from 'element-plus'
+import { ElButton, ElMessage, TableColumnCtx } from 'element-plus'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import { defineComponent, ref } from 'vue'
+import { User } from './TableStage.vue'
 
 export default defineComponent({
   name: 'ElTableDemo',
@@ -18,7 +19,7 @@ export default defineComponent({
         ElMessage.success('Delete Successfully')
       }, 3e3)
     }
-    const columns = [
+    const columns: Partial<TableColumnCtx<User>>[] = [
       { prop: 'date', label: 'Date' },
       {
         label: 'Operation',

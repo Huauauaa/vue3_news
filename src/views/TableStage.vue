@@ -11,7 +11,7 @@ import ElTableDemo from './ElTableDemo'
 import { ElButton, TableColumnCtx } from 'element-plus'
 import { h } from 'vue'
 
-interface User {
+export interface User {
   date: string
   name: string
   address: string
