@@ -1,11 +1,4 @@
-<script setup lang="ts">
-import PostPage from './components/PostPage.vue'
-import AlbumPage from './components/AlbumPage.vue'
+<template><HelloWorld></HelloWorld></template>
+<script setup lang="tsx">
+import HelloWorld from '@/views/HelloWorld'
 </script>
-
-<template>
-  <PostPage></PostPage>
-  <AlbumPage></AlbumPage>
-</template>
-
-<style scoped></style>
